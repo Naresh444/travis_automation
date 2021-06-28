@@ -1,8 +1,5 @@
 #Dockerfile
-FROM ubuntu:latest
+FROM centos:latest
 LABEL maintainer="pathurunareshkumar@gmail.com"
-RUN apt-get update && \
-apt-get upgrade -y
-RUN apt-get install ssh -y
+RUN yum update -y 
 EXPOSE 80
-CMD ["/usr/sbin/nginx", "-g", "daemon off;"]
